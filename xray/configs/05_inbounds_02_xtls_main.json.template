@@ -3,7 +3,7 @@
 		{
 			"tag":"xtls",
 			// "port": 400, // This is TLS entrypoint. This entrypoint does the SSL Termination then routes the request based on the Path or ALPN type.
-			"listen": "/dev/shm/hiddify-xtls-main.sock,0666",
+			"listen": "@@xtlsin",
 			"protocol": "vless",
 			"settings": {
 			  "decryption": "none",
