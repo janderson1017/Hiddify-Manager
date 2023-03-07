@@ -1,0 +1,21 @@
+{
+	"inbounds": [
+		{
+			"tag": "trojan-grpc-new",
+			"listen": "@@trojan-grpc-new", // listen on localhost
+			"protocol": "trojan",
+			"settings": {
+			  "clients": [
+				{"password": "defaultuserguidsecret", "email": "defaultuserguidsecret@hiddify.com"}
+			  ]
+			},
+			"streamSettings": {
+			  "network": "grpc",
+			  "security": "none",
+			  "grpcSettings": {
+				"serviceName": "PATH_TROJANg"
+			  }
+			}
+		  }
+	]
+}
