@@ -18,7 +18,7 @@
 				  "type": "http",
 				  "request": {
 					"path": [
-					  "/PATH_TROJANt"
+					  "/PATH_TROJANPATH_TCP"
 					]
 				  }
 				}
