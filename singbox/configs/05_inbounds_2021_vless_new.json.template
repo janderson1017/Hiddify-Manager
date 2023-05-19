@@ -15,7 +15,9 @@
   			],
 			"transport": {
 				"type": "http",
-				"path": "/PATH_VLESSPATH_TCP",
+				"path":"",
+				"method":"",
+				//"path": "/PATH_VLESSPATH_TCP",
 				"idle_timeout": "15s",
 				"ping_timeout": "15s"
 			}
