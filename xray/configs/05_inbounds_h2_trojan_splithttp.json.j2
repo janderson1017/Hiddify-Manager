@@ -1,0 +1,31 @@
+{
+	{% if 0 and hconfigs['trojan_enable'] and hconfigs['splithttp_enable'] %}
+		"inbounds": [
+			{
+				"tag":"trojan-splithttp-h2",
+				{#"listen": "@@trojan-splithttp-h2", #}
+			"listen": "127.0.0.1", "port":1016,
+				"protocol": "trojan",
+				"settings": {
+				"clients": [
+					{% for u in users %}
+						{"password": "{{ u['uuid'] }}", "email": "{{ u['uuid'] }}@hiddify.com"},
+					{% endfor %}
+				]
+				},
+				"streamSettings": {
+				"network": "splithttp",
+				"security": "none",
+				"splithttpSettings": {
+					{# "acceptProxyProtocol": true, #}
+					"path":"/{{ hconfigs['path_trojan'] }}{{ hconfigs['path_splithttp'] }}2", 
+				}
+				},
+				"sniffing": {
+				"enabled": true,
+				"destOverride": ["http","tls", "quic"]
+				}
+			}
+		]
+	{% endif %}
+}

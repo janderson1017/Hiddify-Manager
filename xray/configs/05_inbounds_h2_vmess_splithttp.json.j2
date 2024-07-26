@@ -1,0 +1,31 @@
+{
+	{% if 0 and hconfigs['vmess_enable'] and hconfigs['splithttp_enable'] %}
+		"inbounds": [
+			{
+				"tag":"vmess-splithttp-h2",
+				{# "listen": "@@vmess-splithttp-h2",#}
+				"listen": "127.0.0.1", "port":1036,
+				"protocol": "vmess",
+				"settings": {
+				"clients": [
+					{% for u in users %}
+						{"id": "{{ u['uuid'] }}", "email": "{{ u['uuid'] }}@hiddify.com", "alterId": 0},
+					{% endfor %}
+				]
+				},
+				"streamSettings": {
+				"network": "splithttp",
+				"security": "none",
+				"splithttpSettings": {
+					{#"acceptProxyProtocol": true,#}
+					"path": "/{{ hconfigs['path_vmess'] }}{{ hconfigs['path_splithttp'] }}2", 
+				}
+				},
+				"sniffing": {
+				"enabled": true,
+				"destOverride": ["http","tls", "quic"]
+				}
+			}	  
+		]
+	{% endif %}
+}
