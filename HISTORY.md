@@ -1,6 +1,13 @@
 # Changelog
 
 
+## (unreleased)
+
+### Other
+
+* Update warp api with latest cf changes. [hiddify-com]
+
+
 ## v11.0.10 (2025-07-12)
 
 ### Fix
