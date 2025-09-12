@@ -1,6 +1,6 @@
 # bash download_wgcf.sh
 source /opt/hiddify-manager/common/package_manager.sh
-install_package wireguard-dkms wireguard-tools
+install_package wireguard-tools
 download_package wgcf wgcf
 if [ "$?" == "0"  ] || ! is_installed ./wgcf; then
     chmod +x wgcf || exit 1
