@@ -6,3 +6,7 @@ cd $( dirname -- "$0"; )
 
 # systemctl restart systemd-journald
 # sysctl -w vm.drop_caches=3
+
+
+
+bash /opt/hiddify-manager/acme.sh/run.sh

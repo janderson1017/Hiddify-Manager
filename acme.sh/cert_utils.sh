@@ -10,8 +10,21 @@ is_ok_domain_zerossl() {
         if [[ $domain == *.$tld ]]; then
             return 1 # Domain is restricted
         fi
+        
     done
     return 0 # Domain is not restricted
+}
+isipv4() {
+  [[ $1 =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]] || return 1
+  IFS='.' read -r a b c d <<< "$1"
+  for o in $a $b $c $d; do
+    (( o >= 0 && o <= 255 )) || return 1
+  done
+  return 0
+}
+
+isipv6() {
+  [[ $1 =~ ^([0-9a-fA-F]{0,4}:){2,7}[0-9a-fA-F]{0,4}$ ]]
 }
 function get_cert() {
     cd /opt/hiddify-manager/acme.sh/
@@ -25,6 +38,7 @@ function get_cert() {
     if [ ${#DOMAIN} -le 64 ]; then
         mkdir -p /opt/hiddify-manager/acme.sh/www/.well-known/acme-challenge
         echo "location /.well-known/acme-challenge {root /opt/hiddify-manager/acme.sh/www/;}" >/opt/hiddify-manager/nginx/parts/acme.conf
+        chown -R nginx /opt/hiddify-manager/acme.sh/www/
         # systemctl reload --now hiddify-nginx
 
         DOMAIN_IP=$(dig +short -t a $DOMAIN.)
@@ -39,11 +53,18 @@ function get_cert() {
         # if [ "$SERVER_IPv6" != "" ]; then
         #     flags="--listen-v6"
         # fi
-
-        acme.sh --issue -w /opt/hiddify-manager/acme.sh/www/ -d $DOMAIN --log $(pwd)/../log/system/acme.log --server letsencrypt --pre-hook "systemctl restart hiddify-nginx"
-        if is_ok_domain_zerossl "$DOMAIN"; then
-            acme.sh --issue -w /opt/hiddify-manager/acme.sh/www/ -d $DOMAIN --log $(pwd)/../log/system/acme.log --pre-hook "systemctl restart hiddify-nginx"
+        alias acmecmd=acme.sh --issue -w /opt/hiddify-manager/acme.sh/www/ --log $(pwd)/../log/system/acme.log --pre-hook "systemctl restart hiddify-nginx"
+        if isipv4 "$DOMAIN"; then
+            acmecmd -d $DOMAIN --server letsencrypt --certificate-profile shortlived --days 6 
+        elif isipv6 "$DOMAIN"; then
+            acmecmd -d [$DOMAIN] --server letsencrypt --certificate-profile shortlived --days 6 
+        else 
+            acmecmd -d $DOMAIN --server letsencrypt
+            if is_ok_domain_zerossl "$DOMAIN"; then
+                acmecmd -d $DOMAIN 
+            fi
         fi
+        
 
         cp $ssl_cert_path/$DOMAIN.crt $ssl_cert_path/$DOMAIN.crt.bk
         cp $ssl_cert_path/$DOMAIN.crt.key $ssl_cert_path/$DOMAIN.crt.key.bk
