@@ -3,6 +3,13 @@
 
 ## (unreleased)
 
+### Fix
+
+* Cert renewal, add ip cert support. [hiddify-com]
+
+
+## v11.0.13 (2025-09-12)
+
 ### Other
 
 * Update warp api with latest cf changes. [hiddify-com]
