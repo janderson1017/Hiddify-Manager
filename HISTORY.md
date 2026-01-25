@@ -5,6 +5,13 @@
 
 ### Fix
 
+* Cert bug. [hiddify-com]
+
+
+## v11.0.14 (2026-01-24)
+
+### Fix
+
 * Cert renewal, add ip cert support. [hiddify-com]
 
 
