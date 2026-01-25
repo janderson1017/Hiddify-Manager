@@ -26,6 +26,13 @@ isipv4() {
 isipv6() {
   [[ $1 =~ ^([0-9a-fA-F]{0,4}:){2,7}[0-9a-fA-F]{0,4}$ ]]
 }
+acmecmd() {
+    acme.sh --issue \
+        -w /opt/hiddify-manager/acme.sh/www/ \
+        --log /opt/hiddify-manager/log/system/acme.log \
+        --pre-hook "systemctl restart hiddify-nginx" \
+        "$@"
+}
 function get_cert() {
     cd /opt/hiddify-manager/acme.sh/
     source ./lib/acme.sh.env
@@ -53,7 +60,7 @@ function get_cert() {
         # if [ "$SERVER_IPv6" != "" ]; then
         #     flags="--listen-v6"
         # fi
-        alias acmecmd=acme.sh --issue -w /opt/hiddify-manager/acme.sh/www/ --log $(pwd)/../log/system/acme.log --pre-hook "systemctl restart hiddify-nginx"
+        
         if isipv4 "$DOMAIN"; then
             acmecmd -d $DOMAIN --server letsencrypt --certificate-profile shortlived --days 6 
         elif isipv6 "$DOMAIN"; then
