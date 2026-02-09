@@ -25,4 +25,3 @@ ssh-liberty-bridge|1.3.0|arm64|https://github.com/hiddify/ssh-liberty-bridge/rel
 ssh-liberty-bridge|1.3.0|amd64|https://github.com/hiddify/ssh-liberty-bridge/releases/download/v1.3.0/ssh-liberty-bridge-amd64|2361ac482b5dccedab9e3910af204980353856b6a2b4da586cb67b8336bd0c9c
 xray|25.6.8|arm64|https://github.com/XTLS/Xray-core/releases/download/v25.6.8/Xray-linux-arm64-v8a.zip|ca404752f27176cdaaddf929ec65a96cf18cceba403d6d97a66cdac48ef84dfe
 xray|25.6.8|amd64|https://github.com/XTLS/Xray-core/releases/download/v25.6.8/Xray-linux-64.zip|51bcd3304fdbd64b58048b056da005fbaa6c83577fc351cae34024760e111e4b
-
