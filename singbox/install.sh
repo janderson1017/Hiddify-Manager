@@ -7,11 +7,10 @@ version="" #use specific version if needed otherwise it will use the latest
 
 
 
-download_package singbox sb.zip $version
+download_package singbox sb.tar.gz $version
 if [ "$?" == "0"  ] || ! is_installed ./sing-box; then
-    install_package unzip 
-    unzip -o sb.zip > /dev/null || exit 1
-    cp -f sing-box-*/sing-box . 2>/dev/null || exit 2
+    tar -xzf sb.tar.gz  || exit 1
+    cp -f sing-box-*/* . 2>/dev/null || exit 2
     rm -r sb.zip sing-box-* 2>/dev/null || exit 3
     chown root:root sing-box || exit 4
     chmod +x sing-box || exit 5
