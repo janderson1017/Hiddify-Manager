@@ -1,8 +1,7 @@
 #!/bin/bash
-SCRIPT_DIR="$(dirname "$BASH_SOURCE")"
-
-if [[ *develop* != $(realpath $SCRIPT_DIR) ]];then 
-    SCRIPT_DIR="/opt/hiddify-manager/common/"
+SCRIPT_DIR="$(realpath $(dirname "$BASH_SOURCE"))"
+if [[ "$SCRIPT_DIR" != *develop* ]]; then
+    SCRIPT_DIR="/opt/hiddify-manager/common"
 fi
 
 source $SCRIPT_DIR/utils.sh

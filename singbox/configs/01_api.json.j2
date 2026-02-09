@@ -12,6 +12,21 @@
 					{% endfor%}
 				]
 			}
+		},
+	
+		"cache_file": {
+			"enabled": true,
+			"path": "cache.db",
+			"store_warp_config": true
+		},
+		"monitoring": {
+			"interval": "10m0s",
+			"urls": [
+				"https://google.com/generate_204"
+			],
+			"debounce_window": "500ms",
+			"idle_timeout": "18ms"
 		}
-	}
+
+  	}
 }

@@ -61,11 +61,12 @@
                 {% endfor %}
               ]
           },
-          {% if hconfigs.get('warp_sites','').split('\n') %}
+          {% set domains=hconfigs.get('warp_sites','').split('\n') %}
+          {% if domains[0].strip()!="" %}
           {
               "outbound": "WARP",
               "domain":[                
-                    {%for d in hconfigs.get('warp_sites','').split('\n')%}
+                    {%for d in domains%}
                         "{{d.strip()}}",
                     {% endfor %}
               ]
@@ -73,7 +74,7 @@
           {% endif %}
         {% endif %}
         {
-          "outbound": "blackhole", "geoip": ["private"]
+          "action": "reject", "ip_is_private": true
         }
         // {// Block BitTorrent protocol
         //   "type": "field", "outboundTag": "blackhole", "protocol": ["bittorrent"]
