@@ -65,14 +65,14 @@ function get_cert() {
             acmecmd -d $DOMAIN --server letsencrypt --certificate-profile shortlived --days 6 
         elif isipv6 "$DOMAIN"; then
             acmecmd -d [$DOMAIN] --server letsencrypt --certificate-profile shortlived --days 6 
-        else 
-            acmecmd -d $DOMAIN --server letsencrypt
-            if is_ok_domain_zerossl "$DOMAIN"; then
-                acmecmd -d $DOMAIN 
-            fi
-        fi
-        
+        else
+            acmecmd -d "$DOMAIN" --server letsencrypt
+            err=$?
 
+            if [ "$err" -ne 0 ] && is_ok_domain_zerossl "$DOMAIN"; then
+          acmecmd -d "$DOMAIN" --server zerossl
+        fi
+    fi
         cp $ssl_cert_path/$DOMAIN.crt $ssl_cert_path/$DOMAIN.crt.bk
         cp $ssl_cert_path/$DOMAIN.crt.key $ssl_cert_path/$DOMAIN.crt.key.bk
         acme.sh --installcert -d $DOMAIN \
