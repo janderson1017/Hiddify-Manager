@@ -46,7 +46,9 @@ backend naive
 
 backend naive_quic
     mode http
-    server naive quic4@127.0.0.1:4300 send-proxy-v2 tfo ssl verify none 
+    #server naive quic4@127.0.0.1:4300 send-proxy-v2 tfo ssl verify none 
+    server naive 127.0.0.1:4201 send-proxy-v2 tfo proto h2
+
 
 
 
