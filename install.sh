@@ -91,7 +91,7 @@ function main() {
         # install_run other/v2ray $ENABLE_V2RAY
         
         update_progress "${PROGRESS_ACTION}" "SSH Proxy" 55
-        install_run other/ssh $(hconfig "ssh_server_enable") &
+        install_run other/ssh 0 &
         
         #update_progress "${PROGRESS_ACTION}" "ShadowTLS" 60
         #install_run other/shadowtls $(hconfig "shadowtls_enable")
