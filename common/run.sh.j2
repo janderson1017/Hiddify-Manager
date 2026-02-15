@@ -51,6 +51,17 @@ add2iptables46 "INPUT -i lo -j ACCEPT"
   {%endif%}
 {%endfor%}
 
+{% for port in hconfigs["mieru_tcp_ports"].split(",") %}
+  {%if port %}
+  allow_port "tcp" {{port}} #tcp_mieru
+  {%endif%}
+{%endfor%}
+{% for port in hconfigs["mieru_udp_ports"].split(",") %}
+  {%if port %}
+  allow_port "udp" {{port}} #udp_mieru
+  {%endif%}
+{%endfor%}
+
 # ICMP for ipv4
 add2iptables "INPUT -p icmp -j ACCEPT"
 # add2iptables "INPUT -p icmp -m icmp --icmp-type 0 -m conntrack --ctstate NEW -j ACCEPT"

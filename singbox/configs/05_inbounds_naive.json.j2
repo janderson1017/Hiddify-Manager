@@ -1,0 +1,47 @@
+{
+    "inbounds":[
+        {% if  hconfigs['naive_enable'] %}
+        
+                {
+                    "tag":"v10-naive",
+                    "listen": "127.0.0.1",
+                    "listen_port":4201,
+                    "tcp_fast_open": true,
+                    "sniff": true,
+                    "network": "tcp",
+                    "sniff_override_destination": true,
+                    "domain_strategy": "prefer_ipv4",
+                    "proxy_protocol":true,	
+                    {% include '/opt/hiddify-manager/singbox/configs/common/protocols/naive.pj2' %},
+                },
+                {% for i,d in enumerate(domains)  %}
+                {%set domain=d['domain']%}
+
+                {
+                    "tag":"v10-naive-quic{{i}}",
+                    "listen": "127.0.0.1",
+                    "listen_port":{{4300+i}},
+                    "sniff": true,
+                    "network": "udp",
+                    "sniff_override_destination": true,
+                    "domain_strategy": "prefer_ipv4",
+                    "proxy_protocol":true,	
+                    {% include '/opt/hiddify-manager/singbox/configs/common/protocols/naive.pj2' %},
+                    "tls": {
+                        "enabled": true,
+                        "server_name": "{{domain}}",
+                        
+                        {% if exec("[ -f /opt/hiddify-manager/ssl/"+domain[0:64]+".crt ]&& echo -n 'true' || echo -n 'false'")=='true' %}
+                            "certificate_path": "/opt/hiddify-manager/ssl/{{domain[0:64]}}.crt",
+                            "key_path": "/opt/hiddify-manager/ssl/{{domain[0:64]}}.crt.key",
+                        {%else %}
+                            {%set cert=exec("ls /opt/hiddify-manager/ssl/*.crt | tail -1").strip()%}
+                            "certificate_path": "{{cert}}",
+                            "key_path": "{{cert}}.key",
+					    {%endif%}
+				    }
+                },
+                {%endfor%}
+        {%endif%}
+    ]
+}

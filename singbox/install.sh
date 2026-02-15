@@ -2,19 +2,19 @@ source ../common/utils.sh
 source ../common/package_manager.sh
 rm -rf configs/*.template
 
-# latest= #$(get_release_version hiddify-sing-box)
+# latest= #$(get_release_version hiddify-hiddify-core)
 version="" #use specific version if needed otherwise it will use the latest
 
 
 
 download_package singbox sb.tar.gz $version
-if [ "$?" == "0"  ] || ! is_installed ./sing-box; then
+if [ "$?" == "0"  ] || ! is_installed ./hiddify-core; then
     tar -xzf sb.tar.gz  || exit 1
-    cp -f sing-box-*/* . 2>/dev/null || exit 2
-    rm -r sb.zip sing-box-* 2>/dev/null || exit 3
-    chown root:root sing-box || exit 4
-    chmod +x sing-box || exit 5
-    ln -sf /opt/hiddify-manager/singbox/sing-box /usr/bin/sing-box || exit 6
+    cp -f hiddify-core-*/* . 2>/dev/null || exit 2
+    rm -r sb.zip hiddify-core-* 2>/dev/null || exit 3
+    chown root:root hiddify-core || exit 4
+    chmod +x hiddify-core || exit 5
+    ln -sf /opt/hiddify-manager/singbox/hiddify-core /usr/bin/hiddify-core || exit 6
     rm geosite.db 2>/dev/null 
     set_installed_version singbox $version
 fi

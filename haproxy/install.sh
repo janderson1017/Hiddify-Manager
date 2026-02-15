@@ -7,7 +7,7 @@ if is_installed sniproxy; then
     pkill -9 sniproxy >/dev/null 2>&1
 fi
 
-HAPROXY_VERSION=3.2
+HAPROXY_VERSION=3.3
 if grep -q '^VERSION_CODENAME=jammy' /etc/os-release; then \
     warning "Deprecated Warning: OS is Jammy (Ubuntu 22.04). haproxy max version is 3.0"; \
     HAPROXY_VERSION=3.0

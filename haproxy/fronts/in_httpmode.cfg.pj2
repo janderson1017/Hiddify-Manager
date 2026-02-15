@@ -9,6 +9,8 @@ frontend in-httpmode
   mode http
   http-response set-header alt-svc "h3=\":443\";ma=900;"
     
+
+
     
   #multimap not supported use trick
   #use_backend %[hdr(:authority),map_dom(/opt/hiddify-manager/haproxy/maps/http_domain)]
@@ -16,7 +18,12 @@ frontend in-httpmode
 
   http-request set-var(txn.backend) req.hdr(host),map_dom(/opt/hiddify-manager/haproxy/maps/http_domain,default)
   http-request set-var(txn.backend) path,map_beg(/opt/hiddify-manager/haproxy/maps/path_v10,nginx_dispatcher_http_h2) if  { var(txn.backend) -m str default }
-
+  
+  acl is_h3 ssl_fc_alpn -i h3
+  acl is_connect method CONNECT
+  use_backend naive_quic if is_connect is_h3
+  use_backend naive if is_connect
+  
   use_backend %[var(txn.backend)]    
 
 

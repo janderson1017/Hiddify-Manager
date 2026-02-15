@@ -37,21 +37,36 @@
     // "domainStrategy": "AsIs",
     "final": {% if hconfigs['warp_mode'] == 'all' %}"WARP"{% else %}"freedom"{% endif %},
       "rules": [
+        {"action":"sniff"},
         {
-            "outbound": "freedom",
+            "action": "hijack-dns",
             "port": [53]
+        },
+        {
+            "action": "hijack-dns",
+            "protocol": "dns",
         },
         {
           "protocol": "quic",
           "port": [443],
-          "outbound": "blackhole"
+          "action":"reject",
+          "method": "default"
         },
+        {% if hconfigs['block_iran_sites'] %}
+        {
+          "action":"reject","method":"default",
+             "rule_set":[
+              "geoip-{{region}}", "geosite-{{region}}"
+             ]
+        },
+        {%else%}
         {
             "outbound": {% if hconfigs['warp_mode'] == 'disable' %}"forbidden_sites"{% else %}"WARP"{% endif %},
              "rule_set":[
               "geoip-{{region}}", "geosite-{{region}}"
              ]
         },
+        {%endif%}
         {% if hconfigs['warp_mode'] != 'disable' %}
           {
               "outbound": "WARP",
@@ -77,7 +92,7 @@
           "action": "reject", "ip_is_private": true
         }
         // {// Block BitTorrent protocol
-        //   "type": "field", "outboundTag": "blackhole", "protocol": ["bittorrent"]
+        //   "type": "field",  "protocol": ["bittorrent"],"action":"reject","method": "default"
         // },
       ]
     }

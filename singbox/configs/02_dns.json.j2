@@ -3,12 +3,11 @@
     "servers": [
         {
         "tag": "cloudflare",
-        "address": "{{ hconfigs['dns_server'] or "1.1.1.1" }}",
-        "strategy": "prefer_ipv4",
-        "detour": "freedom",
+        "type":"udp",
+        "server": "{{ hconfigs['dns_server'] or "1.1.1.1" }}",
+      
       }
     ],
-    "rules": [],
     "final": "cloudflare",
     "strategy": "prefer_ipv4"
   }
