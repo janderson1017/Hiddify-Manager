@@ -70,8 +70,15 @@ function get_cert() {
             err=$?
 
             if [ "$err" -ne 0 ] && is_ok_domain_zerossl "$DOMAIN"; then
-          acmecmd -d "$DOMAIN" --server zerossl
-        fi
+            acmecmd -d "$DOMAIN" --server zerossl
+            err=$?
+            fi
+
+            if [ "$err" -ne 0 ]; then
+            echo "acme issue failed, skipping installcert"
+            bash generate_self_signed_cert.sh $DOMAIN
+            return 1
+            fi
     fi
         cp $ssl_cert_path/$DOMAIN.crt $ssl_cert_path/$DOMAIN.crt.bk
         cp $ssl_cert_path/$DOMAIN.crt.key $ssl_cert_path/$DOMAIN.crt.key.bk
