@@ -1,13 +1,14 @@
 frontend in-httpmode
   bind abns@http_in_h2 accept-proxy allow-0rtt
   bind abns@https_in_http_mode accept-proxy allow-0rtt ssl crt /opt/hiddify-manager/ssl/ alpn h3,h2,http/1.1
-
-  
-
   mode http
-  acl is_naive method CONNECT
 
-  http-response set-header alt-svc "h3=\":443\";ma=900;" if !is_naive 
+  http-request set-var(txn.naive_secret) req.hdr(hiddify-naive-secret)
+
+  acl is_naive var(txn.naive_secret) -m str /{{hconfigs["path_naive"]}}{{hconfigs["path_tcp"]}}
+
+    # http-response can now use the variable ACL without this is_naive is always false for response
+  http-response set-header Alt-Svc 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000' if !is_naive
     
 
 

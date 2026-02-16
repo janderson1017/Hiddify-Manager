@@ -42,26 +42,31 @@ add2iptables46 "INPUT -i lo -j ACCEPT"
   allow_port "tcp" {{hconfigs['shadowsocks2022_port']}} #shadowsocks
 {% endif %}
 
-{% for d in domains if d['internal_port_hysteria2'] or d['internal_port_tuic']  %}
+{% for d in domains if d['internal_port_hysteria2'] or d['internal_port_tuic'] or d['internal_port_naive']  %}
   {% if d['internal_port_hysteria2']>0 %}
   allow_port "udp" {{d['internal_port_hysteria2']}} #hysteria2
   {%endif%}
   {% if d['internal_port_tuic']>0 %}
   allow_port "udp" {{d['internal_port_tuic']}} #tuic
   {%endif%}
-{%endfor%}
 
-{% for port in hconfigs["mieru_tcp_ports"].split(",") %}
-  {%if port %}
-  allow_port "tcp" {{port}} #tcp_mieru
-  {%endif%}
-{%endfor%}
-{% for port in hconfigs["mieru_udp_ports"].split(",") %}
-  {%if port %}
-  allow_port "udp" {{port}} #udp_mieru
+  {% if d['internal_port_naive']>0 %}
+  allow_port "udp" {{d['internal_port_naive']}} #naive_quic
   {%endif%}
 {%endfor%}
 
+{% if hconfigs['mieru_enable'] %}
+  {% for port in hconfigs["mieru_tcp_ports"].split(",") %}
+    {%if port %}
+    allow_port "tcp" {{port}} #tcp_mieru
+    {%endif%}
+  {%endfor%}
+  {% for port in hconfigs["mieru_udp_ports"].split(",") %}
+    {%if port %}
+    allow_port "udp" {{port}} #udp_mieru
+    {%endif%}
+  {%endfor%}
+{%endif%}
 # ICMP for ipv4
 add2iptables "INPUT -p icmp -j ACCEPT"
 # add2iptables "INPUT -p icmp -m icmp --icmp-type 0 -m conntrack --ctstate NEW -j ACCEPT"
