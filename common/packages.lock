@@ -31,3 +31,5 @@ xray|26.2.6|arm64|https://github.com/XTLS/Xray-core/releases/download/v26.2.6/Xr
 xray|26.2.6|amd64|https://github.com/XTLS/Xray-core/releases/download/v26.2.6/Xray-linux-64.zip|29ce535b56e207a406ffa1c2d4842dcc410be003eff8ec508bb732abc9f8e385
 singbox|4.0.2|arm64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.2/hiddify-core-linux-arm64.tar.gz|43eb7d5438c7117c2b569d1b0e07aee1df1e9bf77e7283fdde62ef9f1be14a45
 singbox|4.0.2|amd64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.2/hiddify-core-linux-amd64.tar.gz|a728aa3f8fd259e8b40ab307d008cef6d04e86acc2db11c11d5b602b4f9f6769
+singbox|4.0.3|arm64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.3/hiddify-core-linux-arm64.tar.gz|65553ba4571f1c0869e7794726eb6655dd7f7a5b406af2369c9432f9223a1e64
+singbox|4.0.3|amd64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.3/hiddify-core-linux-amd64.tar.gz|7996925064b09bf2e8b95990c1bb42c4f3cf5770ed9651bac0131bf983337adb
