@@ -30,9 +30,17 @@ acmecmd() {
     acme.sh --issue \
         -w /opt/hiddify-manager/acme.sh/www/ \
         --log /opt/hiddify-manager/log/system/acme.log \
-        --pre-hook "systemctl restart hiddify-nginx" \
+        --pre-hook "bash /opt/hiddify-manager/acme.sh/prepare_acme.sh" \
         "$@"
 }
+
+
+stop_nginx_acme(){
+    echo "" >/opt/hiddify-manager/nginx/parts/acme.conf
+    systemctl reload --now hiddify-nginx
+}
+
+
 function get_cert() {
     cd /opt/hiddify-manager/acme.sh/
     source ./lib/acme.sh.env
@@ -43,10 +51,8 @@ function get_cert() {
     rm -f $ssl_cert_path/$DOMAIN.key
 
     if [ ${#DOMAIN} -le 64 ]; then
-        mkdir -p /opt/hiddify-manager/acme.sh/www/.well-known/acme-challenge
-        echo "location /.well-known/acme-challenge {root /opt/hiddify-manager/acme.sh/www/;}" >/opt/hiddify-manager/nginx/parts/acme.conf
-        chown -R nginx /opt/hiddify-manager/acme.sh/www/
-        # systemctl reload --now hiddify-nginx
+        
+        
 
         DOMAIN_IP=$(dig +short -t a $DOMAIN.)
         DOMAIN_IPv6=$(dig +short -t aaaa $DOMAIN.)
@@ -75,11 +81,11 @@ function get_cert() {
             fi
 
             if [ "$err" -ne 0 ]; then
-            echo "acme issue failed, skipping installcert"
-            bash generate_self_signed_cert.sh $DOMAIN
-            return 1
+                echo "acme issue failed, skipping installcert"
+                bash generate_self_signed_cert.sh $DOMAIN
+                return 1
             fi
-    fi
+        fi
         cp $ssl_cert_path/$DOMAIN.crt $ssl_cert_path/$DOMAIN.crt.bk
         cp $ssl_cert_path/$DOMAIN.crt.key $ssl_cert_path/$DOMAIN.crt.key.bk
         acme.sh --installcert -d $DOMAIN \
@@ -105,9 +111,8 @@ function get_cert() {
 
     chmod 600 $ssl_cert_path/$DOMAIN.crt.key
     chmod 600 -R $ssl_cert_path
-    echo "" >/opt/hiddify-manager/nginx/parts/acme.conf
+    
     systemctl reload --now hiddify-nginx
-
     systemctl reload hiddify-haproxy
 }
 

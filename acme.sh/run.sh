@@ -9,6 +9,7 @@ for d in $domains; do
     get_cert $d &
 done
 wait
+stop_nginx_acme
 
 domains=$(cat ../current.json | jq -r '.domains[] | select(.mode | IN("fake")) | .domain')
 for d in $domains; do
