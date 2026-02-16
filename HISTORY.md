@@ -1,6 +1,117 @@
 # Changelog
 
 
+## (unreleased)
+
+### New
+
+* Update quic with the latest header. [hiddify-com]
+
+* Add naive and mieru and update to hiddify-core. [hiddify-com]
+
+### Fix
+
+* Cert issue. [hiddify-com]
+
+* Error in naive haproxy by disabling it. [hiddify-com]
+
+* Reorder script for redis installation to process service management and password configuration first. [Allan Chan]
+
+### Other
+
+* Temporary fix for naive. [hiddify-com]
+
+* Sperate quic and http mode due to exception in haproxy. [hiddify-com]
+
+* Add better support  for acme. [hiddify-com]
+
+* Add ssh integrated uot. [hiddify-com]
+
+* Update core. [hiddify-com]
+
+* Merge pull request #5239 from SfMustafa/fix/acme-fallback-logic. [Hiddify]
+
+  prevent installcert when acme issue fails
+
+* Prevent installcert when acme issue fails. [SfMustafa]
+
+  Previously, if acmecmd --issue failed (e.g. challenge verification error), the script still proceeded to run acme.sh --installcert.
+
+  This caused errors like missing fullchain.cer, because the certificate was never successfully issued.
+
+  This patch adds a simple check for the final err value after issuing the certificate (including ZeroSSL fallback). If issuing fails, the script skips installcert and falls back to generating a self-signed certificate.
+
+  No functional changes to the success path. Only prevents invalid install attempts after failure.
+
+* Merge pull request #5233 from Alighaemi9731/chore/bump-panel-submodule-tls-fragment-packets-latest. [Hiddify]
+
+  chore(panel): bump submodule for TLS fragment packets support (latest base)
+
+* Chore(panel): bump submodule for tls fragment packets support (latest base) [Ali]
+
+* Merge pull request #5230 from SfMustafa/fix/acme-fallback-logic. [Hiddify]
+
+  Fix double certificate issuance logic in get_cert
+
+* Fix double certificate issuance logic in get_cert. [SfMustafa]
+
+  Previously, the script always attempted a second certificate issuance without checking the result of the first one, which could override a successful Let's Encrypt certificate with a fallback CA.
+
+  Now, ZeroSSL is only used as a fallback if Let's Encrypt fails and the domain is allowed. This makes the behavior deterministic and prevents unnecessary duplicate issuance attempts.
+
+* Update singbox and xray. [hiddify-com]
+
+* Update singbox. [hiddify-com]
+
+* Merge pull request #5045 from moham96/fix-sysctl. [Hiddify]
+
+  Fix sysctl
+
+* Fix sysctl changing ip_local_port_range to range smaller than 32768 causes frequent connection problems. [Mohammad]
+
+* Merge pull request #5159 from allanchan339/dev. [Hiddify]
+
+* Merge pull request #5225 from SfMustafa/Fix-package-lock-bug. [Hiddify]
+
+  Fix wgcf download duplication and update hash and Update package.lock
+
+* Merge branch 'dev' into Fix-package-lock-bug. [Hiddify]
+
+* Merge pull request #5222 from SfMustafa/fix-packages-lock. [Hiddify]
+
+  Update packages.lock
+
+* Update packages.lock. [SfMustafa]
+
+  Updated common/packages.lock to reflect the correct package versions.
+  No other files were changed.
+
+* Merge pull request #5221 from Alighaemi9731/chore/bump-panel-submodule-ech. [Hiddify]
+
+  chore(submodule): bump panel for ECH support
+
+* Chore(submodule): bump panel with init_db ECH backfill fix. [Ali]
+
+* Chore(submodule): bump panel with ECH migration fix. [Ali]
+
+* Chore(submodule): bump panel for ECH support and UI labels. [Ali]
+
+* Fix wgcf download duplication and update hash.Update packages.lock. [SfMustafa]
+
+  The wgcf binary was being downloaded twice.
+
+  Changes:
+  - Removed the old wgcf download logic.
+  - Added the updated wgcf binary.
+  - Updated the hash to match the new wgcf version.
+
+  This removes duplication and ensures the correct binary and checksum are used.
+
+* Update packages.lock. [SfMustafa]
+
+  update wgcf version and fix hash codes.
+
+
 ## v11.0.15 (2026-01-25)
 
 ### Fix
