@@ -19,6 +19,8 @@
 
 ### Other
 
+* Upgrade acme.sh. [hiddify-com]
+
 * Temporary fix for naive. [hiddify-com]
 
 * Sperate quic and http mode due to exception in haproxy. [hiddify-com]
