@@ -62,7 +62,11 @@ backend tgdecoy_http
     server tgdecoy_http {{hconfigs['telegram_fakedomain']}}
 
 backend telegram
-    server telegram 127.0.0.1:1001
+    {%if hconfigs['telegram_lib'] == "telemt" %}
+        server telegram 127.0.0.1:1001 tfo send-proxy-v2
+    {%else%}
+        server telegram 127.0.0.1:1001
+    {%endif%}
 
 {%if hconfigs['ssfaketls_enable'] and hconfigs['ssfaketls_fakedomain'] %}
 backend ssdecoy_http
