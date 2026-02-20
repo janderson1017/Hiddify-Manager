@@ -1,6 +1,6 @@
 "type": "trojan",
 "users": [
     {% for u in users %}
-        {"name": "{{ u['uuid'] }}@hiddify.com", "password": "{{ u['uuid'] }}"},
+        {"name": "{{ u['uuid'] }}", "password": "{{ u['uuid'] }}"},
     {% endfor%}
 ]
