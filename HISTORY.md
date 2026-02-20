@@ -5,6 +5,8 @@
 
 ### New
 
+* Accountable mtproxy. [hiddify-com]
+
 * Update quic with the latest header. [hiddify-com]
 
 * Add naive and mieru and update to hiddify-core. [hiddify-com]
