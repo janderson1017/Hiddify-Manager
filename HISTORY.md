@@ -11,6 +11,8 @@
 
 ### Fix
 
+* Mieru naive ssh user usage iss. [hiddify-com]
+
 * Cert issue. [hiddify-com]
 
 * Error in naive haproxy by disabling it. [hiddify-com]
