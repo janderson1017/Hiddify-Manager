@@ -33,3 +33,7 @@ singbox|4.0.2|arm64|https://github.com/hiddify/hiddify-core/releases/download/v4
 singbox|4.0.2|amd64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.2/hiddify-core-linux-amd64.tar.gz|a728aa3f8fd259e8b40ab307d008cef6d04e86acc2db11c11d5b602b4f9f6769
 singbox|4.0.3|arm64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.3/hiddify-core-linux-arm64.tar.gz|65553ba4571f1c0869e7794726eb6655dd7f7a5b406af2369c9432f9223a1e64
 singbox|4.0.3|amd64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.3/hiddify-core-linux-amd64.tar.gz|7996925064b09bf2e8b95990c1bb42c4f3cf5770ed9651bac0131bf983337adb
+telemt|3.0.7|arm64|https://github.com/telemt/telemt/releases/download/3.0.7/telemt-aarch64-linux-gnu.tar.gz|7a0ac334fa4783b998f1ee7e6819e453be492f55c18200f72fd762eb28c10202
+telemt|3.0.7|amd64|https://github.com/telemt/telemt/releases/download/3.0.7/telemt-x86_64-linux-gnu.tar.gz|ce214f165f6bb7bfdef1805a5382a4fd64d6bc9a4a777a098e55b3553caf516d
+singbox|4.0.4|arm64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.4/hiddify-core-linux-arm64.tar.gz|d4e88c901a021711d1198791875d18969111331199794f6a5355ac9461e71788
+singbox|4.0.4|amd64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.4/hiddify-core-linux-amd64.tar.gz|2a05fd3ade1a458b39331b090f693b8f920c1ebd8ad48dedb192bb71f19c7169
