@@ -13,6 +13,8 @@
 
 ### Fix
 
+* Mtproxy. [hiddify-com]
+
 * Mieru naive ssh user usage iss. [hiddify-com]
 
 * Cert issue. [hiddify-com]
