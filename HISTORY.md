@@ -7,6 +7,12 @@
 
 * Add dnstt. [hiddify-com]
 
+### Fix
+
+* Issue. [hiddify-com]
+
+* Bug. [hiddify-com]
+
 
 ## v12.0.0 (2026-02-21)
 
