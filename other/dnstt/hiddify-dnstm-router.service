@@ -1,0 +1,32 @@
+[Unit]
+Description=dnstm tunnel: dnstm-dnstt-socks
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dnstm
+Group=dnstm
+ExecStart=/opt/hiddify-manager/other/dnstt/dnstm dnsrouter serve -C /opt/hiddify-manager/other/dnstt/dnstm_configs
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+MemoryDenyWriteExecute=yes
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target
+
+

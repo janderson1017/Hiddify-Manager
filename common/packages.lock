@@ -37,3 +37,7 @@ telemt|3.0.7|arm64|https://github.com/telemt/telemt/releases/download/3.0.7/tele
 telemt|3.0.7|amd64|https://github.com/telemt/telemt/releases/download/3.0.7/telemt-x86_64-linux-gnu.tar.gz|ce214f165f6bb7bfdef1805a5382a4fd64d6bc9a4a777a098e55b3553caf516d
 singbox|4.0.4|arm64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.4/hiddify-core-linux-arm64.tar.gz|d4e88c901a021711d1198791875d18969111331199794f6a5355ac9461e71788
 singbox|4.0.4|amd64|https://github.com/hiddify/hiddify-core/releases/download/v4.0.4/hiddify-core-linux-amd64.tar.gz|2a05fd3ade1a458b39331b090f693b8f920c1ebd8ad48dedb192bb71f19c7169
+dnstt|1.0.0|amd64|https://dnstt.network/dnstt-server-linux-amd64|bf291ed4b9988a82d5501bc45e23ceba6ff1e1b3439b43d73a94d4c9cc83ccd1
+dnstt|1.0.0|arm64|https://dnstt.network/dnstt-server-linux-arm64|72a71d83356bab8388b25bb80b5fe3c1eb3c70115e77f9050cead0aaa1daccc2
+dnstm|0.7.0|amd64|https://github.com/hiddify/dnstm/releases/download/v0.7.0/dnstm-linux-amd64|cacaa866d71253e4220ce6bc8032475d7a6a5db443767c87b78b6da81266b126
+dnstm|0.7.0|arm64|https://github.com/hiddify/dnstm/releases/download/v0.7.0/dnstm-linux-arm64|91e2b1cc990846277e3fe7ea55b246575f583355cc3e47e75dd8a87baac0fa0d

@@ -1,0 +1,51 @@
+
+for svc in hiddify-dnstt-*.service; do
+    systemctl stop "$svc"
+    rm -rf svc
+done
+
+{%for d in domains if d['mode']=="dnstt"%}
+cat << EOF > hiddify-dnstt-{{d.domain}}.service
+[Unit]
+Description=dnstm tunnel: dnstm-dnstt-socks
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dnstt
+Group=dnstt
+ExecStart=/opt/hiddify-manager/other/dnstt/dnstt-server -udp 127.0.0.1:{{d['internal_port_dnstt']}} -privkey-file /opt/hiddify-manager/other/dnstt/server.key -mtu 1232 {{d.domain}} 127.0.0.1:2001
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadOnlyPaths=/opt/hiddify-manager/other/dnstt/server.key
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+MemoryDenyWriteExecute=yes
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+
+ln -sf  $(pwd)/hiddify-dnstt-{{d.domain}}.service /etc/systemd/system/hiddify-dnstt-{{d.domain}}.service
+
+systemctl daemon-reload
+systemctl enable hiddify-dnstt-{{d.domain}}.service
+systemctl restart hiddify-dnstt-{{d.domain}}.service
+
+{%endfor%}
+ln -sf  $(pwd)/hiddify-dnstm-router.service /etc/systemd/system/hiddify-dnstm-router.service

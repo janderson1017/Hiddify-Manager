@@ -19,3 +19,6 @@ fi
 
 ln -sf /opt/hiddify-manager/other/hiddify-cli/hiddify-cli.service /etc/systemd/system/hiddify-cli.service
 systemctl enable hiddify-cli.service
+
+systemctl stop hiddify-cli.service
+systemctl disable hiddify-cli.service
