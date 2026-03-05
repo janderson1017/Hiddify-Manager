@@ -5,6 +5,13 @@
 
 ### New
 
+* Add dnstt. [hiddify-com]
+
+
+## v12.0.0 (2026-02-21)
+
+### New
+
 * Accountable mtproxy. [hiddify-com]
 
 * Update quic with the latest header. [hiddify-com]
