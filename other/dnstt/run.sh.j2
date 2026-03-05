@@ -48,4 +48,9 @@ systemctl enable hiddify-dnstt-{{d.domain}}.service
 systemctl restart hiddify-dnstt-{{d.domain}}.service
 
 {%endfor%}
+
+chown dnstt:dnstt -R dnstm_configs
+
 ln -sf  $(pwd)/hiddify-dnstm-router.service /etc/systemd/system/hiddify-dnstm-router.service
+systemctl enable hiddify-dnstm-router.service
+systemctl restart hiddify-dnstm-router.service
