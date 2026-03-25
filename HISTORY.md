@@ -5,6 +5,8 @@
 
 ### New
 
+* Add vaydns and update telemt. [hiddify-com]
+
 * Add dnstt. [hiddify-com]
 
 ### Fix
