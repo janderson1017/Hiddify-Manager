@@ -41,3 +41,7 @@ dnstt|1.0.0|amd64|https://dnstt.network/dnstt-server-linux-amd64|bf291ed4b9988a8
 dnstt|1.0.0|arm64|https://dnstt.network/dnstt-server-linux-arm64|72a71d83356bab8388b25bb80b5fe3c1eb3c70115e77f9050cead0aaa1daccc2
 dnstm|0.7.0|amd64|https://github.com/hiddify/dnstm/releases/download/v0.7.0/dnstm-linux-amd64|cacaa866d71253e4220ce6bc8032475d7a6a5db443767c87b78b6da81266b126
 dnstm|0.7.0|arm64|https://github.com/hiddify/dnstm/releases/download/v0.7.0/dnstm-linux-arm64|91e2b1cc990846277e3fe7ea55b246575f583355cc3e47e75dd8a87baac0fa0d
+vaydns|0.2.0|arm64|https://github.com/net2share/vaydns/releases/download/v0.2.0/vaydns-server-linux-arm64|82dd2756fbf87290957508570d92e10ddd2c6d4d3b3a34363e1245af7dc13ebe
+vaydns|0.2.0|amd64|https://github.com/net2share/vaydns/releases/download/v0.2.0/vaydns-server-linux-amd64|2e50a8ea286dcf4299d5aa485a501d079d3ee2dd7b6388315d6eb4131ac9e2c8
+telemt|3.3.31|arm64|https://github.com/telemt/telemt/releases/download/3.3.31/telemt-aarch64-linux-gnu.tar.gz|a52c6577b69c536a716eb86a389a5baff8eb98e616074aad118d82bc3ea98029
+telemt|3.3.31|amd64|https://github.com/telemt/telemt/releases/download/3.3.31/telemt-x86_64-linux-gnu.tar.gz|2e3acac4db63b61653c9026ff42af8733cb37c95dce738331c414dcc78226bcd

@@ -7,7 +7,7 @@ if [ "$?" == "0"  ] || ! is_installed ./dnstm; then
     set_installed_version dnstm
 fi
 
-download_package dnstt dnstt-server
+download_package vaydns dnstt-server
 
 
 if [ "$?" == "0"  ] || ! is_installed ./dnstt-server; then
