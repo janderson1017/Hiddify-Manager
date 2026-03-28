@@ -22,6 +22,6 @@ if [ "$?" == "0"  ] || ! is_installed ./dnstt-server; then
     chown "dnstt":"dnstt" "$PRIVATE_KEY_FILE" "$PUBLIC_KEY_FILE"
     chmod 600 "$PRIVATE_KEY_FILE"
     chmod 644 "$PUBLIC_KEY_FILE"
-    set_installed_version dnstt
+    set_installed_version vaydns
 fi
 
