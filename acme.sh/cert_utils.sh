@@ -74,8 +74,7 @@ function get_cert() {
             acmecmd -d [$DOMAIN] --server letsencrypt --certificate-profile shortlived --days 6 --listen-v6
         else
             acmecmd -d "$DOMAIN" --server letsencrypt
-
-            if [ "$err" -ne 0 ] && is_ok_domain_zerossl "$DOMAIN"; then
+            if [ "$?" -ne 0 ] && is_ok_domain_zerossl "$DOMAIN"; then
                 acmecmd -d "$DOMAIN" --server zerossl
             fi
 
