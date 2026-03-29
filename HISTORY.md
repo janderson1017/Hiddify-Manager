@@ -11,9 +11,17 @@
 
 ### Fix
 
+* Bug. [hiddify-com]
+
 * Issue. [hiddify-com]
 
 * Bug. [hiddify-com]
+
+### Other
+
+* Update vaydns. [hiddify-com]
+
+* Update vaydns to 0.2.4. [hiddify-com]
 
 
 ## v12.0.0 (2026-02-21)
