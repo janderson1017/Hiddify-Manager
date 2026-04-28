@@ -1,7 +1,7 @@
 # Changelog
 
 
-## v12.0.0 (2026-02-21)
+## (unreleased)
 
 ### New
 
@@ -11,6 +11,10 @@
 
 ### Fix
 
+* No Dockerfile when install stable version with docker. [Yusheng]
+
+  [Installing HiddifyManager using Docker](https://hiddify.com/manager/installation-and-setup/Install-Hiddify-using-Docker/)
+
 * Bug. [hiddify-com]
 
 * Issue. [hiddify-com]
@@ -18,6 +22,14 @@
 * Bug. [hiddify-com]
 
 ### Other
+
+* Merge branch 'main' into dev. [hiddify-com]
+
+* Merge pull request #5303 from yshngg/patch-1. [Hiddify]
+
+  fix: no Dockerfile when install stable version with docker
+
+* Merge branch 'beta' of github.com:hiddify/Hiddify-Manager into beta. [hiddify-com]
 
 * Update vaydns. [hiddify-com]
 
