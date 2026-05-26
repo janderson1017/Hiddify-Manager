@@ -3,6 +3,13 @@
 
 ## (unreleased)
 
+### Fix
+
+* Domain add issue. [hiddify-com]
+
+
+## v12.3.0 (2026-04-28)
+
 ### New
 
 * Add vaydns and update telemt. [hiddify-com]
