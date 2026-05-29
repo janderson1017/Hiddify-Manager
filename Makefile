@@ -73,24 +73,18 @@ endif
 	@git tag v$${TAG} 
 	git push
 	@git push --tags 
-	make update_beta
+	make sync_branch BRANCH=beta
 	@if ! echo "$${VERSION_STR}" | grep -q "b"; then \
- 		make update_release
+ 		make sync_branch BRANCH=main
 	fi
 	@echo "Github Actions will detect the new tag and release the new version."
 	
 
 
-update_beta:
-	make -C ./hiddify-panel/src update_beta
-	git checkout beta
-	git rebase dev
-	git push
-	git checkout dev
-
-update_release:
-	make -C ./hiddify-panel/src update_release
-	git checkout main
-	git rebase dev
+sync_branch:
+	[ ! -z "$(BRANCH)" ] || { echo "no branch main/dev"; exit 1; } 
+	make -C ./hiddify-panel/src sync_branch BRANCH=$(BRANCH)
+	git checkout $(BRANCH)
+	git rebase dev 
 	git push
 	git checkout dev
