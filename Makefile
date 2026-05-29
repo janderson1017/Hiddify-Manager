@@ -72,10 +72,24 @@ endif
 	@echo "creating git tag : v$${TAG}" 
 	@git tag v$${TAG} 
 	@git push --tags 
-	git checkout beta && git pull && git rebase dev && git push;
+	make update_beta
 	@if ! echo "$${VERSION_STR}" | grep -q "b"; then \
- 		git checkout main && git rebase dev && git push; \ 
+ 		make update_release
 	fi
-	@git checkout dev
 	@echo "Github Actions will detect the new tag and release the new version."
 	
+
+
+update_beta:
+	make -C ./hiddify-panel/src update_beta
+	git checkout beta
+	git rebase dev
+	git push
+	git checkout dev
+
+update_release:
+	make -C ./hiddify-panel/src update_release
+	git checkout main
+	git rebase dev
+	git push
+	git checkout dev
