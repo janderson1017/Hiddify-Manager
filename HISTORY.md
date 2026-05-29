@@ -3,6 +3,13 @@
 
 ## (unreleased)
 
+### Other
+
+* Update xray. [hiddify-com]
+
+
+## v12.3.1 (2026-05-26)
+
 ### Fix
 
 * Domain add issue. [hiddify-com]
