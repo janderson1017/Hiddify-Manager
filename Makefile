@@ -88,3 +88,4 @@ sync_branch:
 	git rebase dev 
 	git push
 	git checkout dev
+	git log -1
