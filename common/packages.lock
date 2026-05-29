@@ -49,3 +49,5 @@ vaydns|0.2.4|arm64|https://github.com/net2share/vaydns/releases/download/v0.2.4/
 vaydns|0.2.4|amd64|https://github.com/net2share/vaydns/releases/download/v0.2.4/vaydns-server-linux-amd64|8fb10c1ead71d46dbc23e92b15675c993a10d5678948e2fc133599782e69a6d6
 vaydns|0.2.5|arm64|https://github.com/net2share/vaydns/releases/download/v0.2.5/vaydns-server-linux-arm64|f74e9b27bb87b2d777288a4eb0ac5b2676a0052c7109d7ed0b861ab895159a32
 vaydns|0.2.5|amd64|https://github.com/net2share/vaydns/releases/download/v0.2.5/vaydns-server-linux-amd64|0f013f8431bb48c3443979f95afd324343c2e93ad910af5146f8c6311014f425
+xray|26.3.27|arm64|https://github.com/XTLS/Xray-core/releases/download/v26.3.27/Xray-linux-arm64-v8a.zip|4d30283ae614e3057f730f67cd088a42be6fdf91f8639d82cb69e48cde80413c
+xray|26.3.27|amd64|https://github.com/XTLS/Xray-core/releases/download/v26.3.27/Xray-linux-64.zip|23cd9af937744d97776ee35ecad4972cf4b2109d1e0fe6be9930467608f7c8ae
