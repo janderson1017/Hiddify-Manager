@@ -71,6 +71,7 @@ endif
 	@git commit -m "release: version $${TAG} 🚀" 
 	@echo "creating git tag : v$${TAG}" 
 	@git tag v$${TAG} 
+	git push
 	@git push --tags 
 	make update_beta
 	@if ! echo "$${VERSION_STR}" | grep -q "b"; then \
