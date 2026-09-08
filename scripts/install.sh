@@ -89,8 +89,8 @@ function main() {
         update_progress "${PROGRESS_ACTION}" "Personal SpeedTest" 35
         install_run services/speedtest $(hconfig "speed_test") &
         
-        update_progress "${PROGRESS_ACTION}" "dnstt Proxy" 40
-        install_run services/dnstt $(hconfig "dnstt_enable") &
+        update_progress "${PROGRESS_ACTION}" "DNS Proxy" 40
+        install_run services/dns_proxy $(hconfig "dnstt_enable") &
 
         update_progress "${PROGRESS_ACTION}" "Telegram Proxy" 40
         install_run services/telegram $(hconfig "telegram_enable") &

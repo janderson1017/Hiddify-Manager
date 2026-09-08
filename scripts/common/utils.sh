@@ -12,6 +12,7 @@ HIDDIFY_SERVER_CONFIG_FILES=(
     "haproxy.cfg"
     "nginx.cfg"
     "rust-rpxy-l4.toml"
+    "dnstm.json"
 )
 
 function ensure_hiddify_data_dirs() {
@@ -39,17 +40,9 @@ function ensure_hiddify_data_dirs() {
             chown -R root:hiddify-common "$HIDDIFY_GENERATED" 2>/dev/null || true
         fi
     fi
-    link_generated_server_configs
+    
 }
 
-function link_generated_server_configs() {
-    mkdir -p "$HIDDIFY_GENERATED"
-    ln -sfn "$HIDDIFY_GENERATED/hiddify-core.json" "$HIDDIFY_SERVICES/hiddify-core/hiddify-core.json"
-    ln -sfn "$HIDDIFY_GENERATED/xray.json" "$HIDDIFY_SERVICES/xray/xray.json"
-    ln -sfn "$HIDDIFY_GENERATED/haproxy.cfg" "$HIDDIFY_SERVICES/haproxy/haproxy.cfg"
-    ln -sfn "$HIDDIFY_GENERATED/nginx.cfg" "$HIDDIFY_SERVICES/nginx/nginx.cfg"
-    ln -sfn "$HIDDIFY_GENERATED/rust-rpxy-l4.toml" "$HIDDIFY_SERVICES/rust-rpxy-l4/rust-rpxy-l4.toml"
-}
 
 function get_commit_version() {
     json_data=$(curl -sL -H "Accept: application/json" "https://github.com/hiddify/$1/commits/main.atom")

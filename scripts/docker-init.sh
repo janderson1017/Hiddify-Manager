@@ -5,7 +5,9 @@ mkdir -p /opt/hiddify-manager/data/ssl /opt/hiddify-manager/data/log/system
 rm -f /opt/hiddify-manager/data/log/*.lock /opt/hiddify-manager/data/log/system/*.lock
 
 
-
+chmod +x /opt/hiddify-manager/services/docker/systemctl /opt/hiddify-manager/services/docker/journalctl 
+cp /opt/hiddify-manager/services/docker/systemctl /usr/bin/systemctl 
+cp /opt/hiddify-manager/services/docker/journalctl /usr/bin/journalctl 
 
 
 # Check and set REDIS_URI_MAIN
