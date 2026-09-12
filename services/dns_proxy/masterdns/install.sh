@@ -7,7 +7,7 @@ if download_package masterdns masterdnsvpn-server.zip; then
     unzip masterdnsvpn-server.zip -d bin
     mv bin/MasterDns* bin/masterdnsvpn-server
     chmod +x bin/masterdnsvpn-server
-    set_installed_version masterdnsvpn
+    set_installed_version masterdns
 elif ! is_installed ./masterdnsvpn-server; then
     echo "WARN: masterdnsvpn-server binary not installed (add masterdnsvpn to packages.lock)" >&2
 fi
