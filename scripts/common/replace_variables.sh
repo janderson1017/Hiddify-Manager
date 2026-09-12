@@ -27,7 +27,7 @@ hiddify-panel-cli dump-server-configs "$HIDDIFY_GENERATED" || {
     echo "Failed to dump server configs into $HIDDIFY_GENERATED" >&2
     exit 1
 }
-link_generated_server_configs
+
 if getent group hiddify-common >/dev/null 2>&1; then
     for f in "${HIDDIFY_SERVER_CONFIG_FILES[@]}"; do
         if [ -f "$HIDDIFY_GENERATED/$f" ]; then

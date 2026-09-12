@@ -181,7 +181,9 @@ function set_config_from_hpanel() {
 
 function install_run() {
     echo "======================$1====================================={"
-   if [ "$DO_NOT_INSTALL" != "true" ];then
+    local start_time=$(date +%s)
+
+    if [ "$DO_NOT_INSTALL" != "true" ];then
             runsh install.sh $@
         if [ "$MODE" != "apply_users" ] && [ "$DOCKER_MODE" != "true"  ]; then
             systemctl daemon-reload
@@ -189,8 +191,11 @@ function install_run() {
     fi
     if [ "$DO_NOT_RUN" != "true" ];then
          runsh run.sh $@
-    fi   
-    echo "}========================$1==================================="
+    fi
+
+    local end_time=$(date +%s)
+    local duration=$((end_time - start_time))
+    echo "}========================$1 (took ${duration}s)=============================="
 }
 
 function runsh() {
