@@ -40,7 +40,12 @@ install_hiddify_cli() {
         log "installed hiddify CLI -> /usr/bin/hiddify"
     fi
 }
-
+disable_all_services() {
+    find /opt/hiddify-manager/ -type d -name "services" -prune -o -type f -name "*.service" -print |
+    xargs -r -n1 basename |
+    tee /dev/stderr |
+    xargs -r -I{} systemctl disable --now {}
+}
 rename_singbox_unit() {
     if [ -e /etc/systemd/system/hiddify-singbox.service ]; then
         log "replacing hiddify-singbox.service with hiddify-core.service"
@@ -77,6 +82,8 @@ move_to_old() {
 
 # Clean install or already migrated: no leftover singbox/ directory.
 if [ ! -d "$HIDDIFY_DIR/singbox" ] || [ -L "$HIDDIFY_DIR/singbox" ]; then
+    disable_all_services
+
     if [ -L "$HIDDIFY_DIR/singbox" ]; then
         log "removing leftover singbox symlink"
         rm -f "$HIDDIFY_DIR/singbox"
