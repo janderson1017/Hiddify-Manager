@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script uninstalls scripts.
 cd /opt/hiddify-manager
 source /opt/hiddify-manager/scripts/common/utils.sh
 function main(){
