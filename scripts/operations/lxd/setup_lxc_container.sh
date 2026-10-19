@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts/operations/lxd.
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
