@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script installs scripts/common.
 source utils.sh
 SCRIPT_DIR="$(cd "$(dirname -- "$0")" && pwd)"
 remove_package apache2 needrestart needrestart-session
