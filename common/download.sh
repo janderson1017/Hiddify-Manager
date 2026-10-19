@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of common.
 # for backward compatibility: v12 servers fetch <branch>/common/download.sh with the
 # package mode (release/beta/dev) as the first argument. Forward to the same
 # branch, since main keeps the old layout until v13 is released there.
