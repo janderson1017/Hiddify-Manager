@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script opens the menu for scripts.
 # cd "$(dirname -- "$0")"
 cd /opt/hiddify-manager/
 source /opt/hiddify-manager/scripts/common/utils.sh
