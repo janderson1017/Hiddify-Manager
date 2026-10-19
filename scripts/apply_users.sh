@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script applies user records for scripts.
 # Regenerate the configs that change with the user list, then reload those services.
 # Output and errors are kept in the log dir: apply-users.out.log and apply-users.err.log.
 cd /opt/hiddify-manager
