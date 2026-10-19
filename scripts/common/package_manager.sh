@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts/common.
 SCRIPT_DIR="$(realpath $(dirname "$BASH_SOURCE"))"
 if [[ "$SCRIPT_DIR" != *develop* ]]; then
     SCRIPT_DIR="/opt/hiddify-manager/scripts/common"
