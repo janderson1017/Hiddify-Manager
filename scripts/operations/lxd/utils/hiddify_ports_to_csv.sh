@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script is part of scripts/operations/lxd/utils.
 
 DIR_PATH=$(dirname "${BASH_SOURCE[0]}")/
 LXC_CONTAINER_NAME="Hiddify-on-LXC"
