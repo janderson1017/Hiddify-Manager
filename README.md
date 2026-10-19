@@ -4,7 +4,7 @@
 
 
 
-[**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) &nbsp;فارسی**](docs/README_fa.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**Русский 🇷🇺**](docs/README_ru.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**简体中文 🇨🇳**](docs/README_cn.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/%20Wiki-Page-808080?style=flat-square)](https://github.com/hiddify/hiddify-manager/wiki)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/FAQ-Here-512DA8?style=flat-square&logo=Favro)](https://github.com/hiddify/hiddify-manager/discussions/categories/q-a-%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D8%B1%D8%A7%DB%8C%D8%AC)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/Report-Bugs-F67909?style=flat-square&logo=Open-Bug-Bounty)](https://github.com/hiddify/hiddify-manager/issues)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) &nbsp;فارسی**](docs/README_fa.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/%20Wiki-Page-808080?style=flat-square)](https://github.com/hiddify/hiddify-manager/wiki)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/FAQ-Here-512DA8?style=flat-square&logo=Favro)](https://github.com/hiddify/hiddify-manager/discussions/categories/q-a-%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D8%B1%D8%A7%DB%8C%D8%AC)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/Report-Bugs-F67909?style=flat-square&logo=Open-Bug-Bounty)](https://github.com/hiddify/hiddify-manager/issues)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 <br>
 <div align=center markdown="1">
@@ -45,7 +45,7 @@
 
 ## Welcome to Hiddify-Manager
 
-Hiddify-Manager is a powerful and professional anti-censorship toolbox, which is a multi-user panel with an effortless installation and <b>supporting more than 20 protocols</b> including <b>Reality</b> and <b>Telegram proxy</b> to circumvent filtering.  It's optimized for censorship circumvention in <b>China</b>, <b>Russia</b> and <b>Iran</b> and listed by <a href="https://github.com/XTLS/Xray-core#installation" target="_blank"><b>Xray</b></a>. 
+Hiddify-Manager is a powerful and professional anti-censorship toolbox, which is a multi-user panel with an effortless installation and <b>supporting more than 20 protocols</b> including <b>Reality</b> and <b>Telegram proxy</b> to circumvent filtering.  It's optimized for censorship circumvention in <b>Iran</b> and listed by <a href="https://github.com/XTLS/Xray-core#installation" target="_blank"><b>Xray</b></a>. 
 
 
 
@@ -134,7 +134,7 @@ And dozens of other features that you will notice upon installation.
  
 You can connect to the internet in 3 modes using Hiddify-Next and Hiddify-Manager. 
 1. This method only circumvents filtered websites via the proxies.
-2. This method circumvents all websites except domestic websites based in China, Russia and Iran. This way the domestic websites can be opened without any proxies (recommended)
+2. This method circumvents all websites except domestic websites based in Iran. This way the domestic websites can be opened without any proxies (recommended)
 3. This method circumvents all websites. 
 
 At the same time, the proposed solution is resistant to detection by the internet filtering entities and prevents the usual attacks on the server i.e., the possibility of detection is minimal, however, do not forget to disable other ports except 22, 80 and 443.  
