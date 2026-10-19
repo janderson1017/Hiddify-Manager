@@ -1,3 +1,4 @@
+# This script is part of scripts/common.
 cd $(dirname -- "$0")
 source ./utils.sh
 
