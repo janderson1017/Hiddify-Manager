@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script updates scripts.
 cd /opt/hiddify-manager
 source /opt/hiddify-manager/scripts/common/utils.sh
 
