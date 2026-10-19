@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script installs services/clash.
 # Clash Meta (Mihomo) client binary only — no systemd service.
 # Used by the panel config tester to run Clash YAML subscriptions natively.
 source /opt/hiddify-manager/scripts/common/utils.sh
