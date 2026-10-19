@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script installs scripts.
 cd /opt/hiddify-manager
 source /opt/hiddify-manager/scripts/common/utils.sh
 ensure_hiddify_data_dirs
