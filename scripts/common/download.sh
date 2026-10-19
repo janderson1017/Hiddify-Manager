@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts/common.
 
 if [[ "$VER" != "" ]];then
     set -- $VER  $@
