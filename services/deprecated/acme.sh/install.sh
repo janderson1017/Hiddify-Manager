@@ -1,3 +1,4 @@
+# This script installs services/deprecated/acme.sh.
 source /opt/hiddify-manager/scripts/common/utils.sh
 source /opt/hiddify-manager/services/acme.sh/utils.sh
 cd "$(dirname -- "$0")"
