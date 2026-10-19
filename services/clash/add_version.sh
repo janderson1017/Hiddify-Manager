@@ -1,3 +1,4 @@
+# This script records the installed version of services/clash.
 latest=$1
 source ../../scripts/common/package_manager.sh
 add_package clash $latest amd64 https://github.com/MetaCubeX/mihomo/releases/download/v$latest/mihomo-linux-amd64-v$latest.gz
