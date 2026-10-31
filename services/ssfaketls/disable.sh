@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/ssfaketls.
 # Turning FakeTLS off must succeed even when units were never installed
 # (otherwise run_parallel paints "FakeTLS Proxy" red on a healthy install).
 systemctl stop hiddify-ss-v2ray.service >/dev/null 2>&1 || true
