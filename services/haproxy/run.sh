@@ -1,3 +1,4 @@
+# This script is part of services/haproxy.
 # ln -sf $(pwd)/haproxy.cfg /etc/haproxy/haproxy.cfg
 
 # REALITY_SERVER_NAMES_HAPROXY=$(echo "$REALITY_SERVER_NAMES" | sed 's/,/ || /g')
