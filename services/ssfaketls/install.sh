@@ -1,3 +1,4 @@
+# This script is part of services/ssfaketls.
 source /opt/hiddify-manager/scripts/common/utils.sh
 
 install_package shadowsocks-libev simple-obfs
