@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts/common.
 cd $(dirname -- "$0")
 source ./utils.sh
 if [ "$(id -u)" -ne 0 ]; then
