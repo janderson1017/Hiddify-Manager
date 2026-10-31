@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts.
 set -e
 
 mkdir -p /opt/hiddify-manager/data/cert /opt/hiddify-manager/data/log

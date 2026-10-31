@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/dns_proxy/slipstream.
 # Run slipstream-server; argv comes from custom_proxy.params via generated args file.
 set -euo pipefail
 INSTANCE="${1:?instance slug required}"

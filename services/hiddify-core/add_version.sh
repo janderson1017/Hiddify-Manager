@@ -1,3 +1,4 @@
+# This script is part of services/hiddify-core.
 latest=$1
 source ../../scripts/common/package_manager.sh
 add_package hiddify-core $latest arm64 https://github.com/hiddify/hiddify-core/releases/download/v$latest/hiddify-core-linux-arm64-glibc.tar.gz

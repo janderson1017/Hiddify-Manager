@@ -1,3 +1,4 @@
+# This script is part of services/mysql.
 # MySQL/MariaDB helpers — source after scripts/common/utils.sh
 
 source /opt/hiddify-manager/scripts/common/utils.sh

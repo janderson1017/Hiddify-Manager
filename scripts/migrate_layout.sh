@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts.
 # After unzip -o of a new release over /opt/hiddify-manager, leftover v10
 # folders remain. If singbox/ still exists, this is an old layout: keep
 # MySQL/Redis passwords and move leftover folders to old/.

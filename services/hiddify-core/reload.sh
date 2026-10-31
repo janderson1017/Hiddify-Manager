@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/hiddify-core.
 if ! systemctl cat hiddify-core.service >/dev/null 2>&1; then
     echo "hiddify-core is not installed"
     exit 0

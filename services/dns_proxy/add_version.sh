@@ -1,3 +1,4 @@
+# This script is part of services/dns_proxy.
 vaydns=0.2.8
 masterdns=2026.06.13.234407-7de2476
 slipstream=0.1.1

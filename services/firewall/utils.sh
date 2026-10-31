@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/firewall.
 # Helpers only the firewall service uses (generated/firewall.sh, rendered from the firewall core).
 # add2iptables*/allow_port/... add rules, redirect_domain_ports redirects the domains' own gateway ports,
 # save_firewall makes the rules survive a reboot.

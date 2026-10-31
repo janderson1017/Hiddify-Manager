@@ -1,3 +1,4 @@
+# This script is part of services/haproxy.
 source /opt/hiddify-manager/scripts/common/utils.sh
 rm -rf *.template
 if is_installed sniproxy; then

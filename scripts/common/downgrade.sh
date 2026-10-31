@@ -1,3 +1,4 @@
+# This script is part of scripts/common.
 cd /opt/hiddify-manager/services/panel
 
 source /opt/hiddify-manager/scripts/common/utils.sh
