@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/dns_proxy.
 source /opt/hiddify-manager/scripts/common/utils.sh
 
 for proto in dnstt slipstream masterdns; do
