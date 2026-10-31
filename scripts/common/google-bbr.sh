@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script is part of scripts/common.
 #
 # Auto install latest kernel for TCP BBR
 #
