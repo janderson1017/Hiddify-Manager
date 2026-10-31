@@ -1,3 +1,4 @@
+# This script is part of services/hiddify-core.
 source /opt/hiddify-manager/scripts/common/utils.sh
 ln -sf $(pwd)/hiddify-core.service /etc/systemd/system/hiddify-core.service
 systemctl daemon-reload

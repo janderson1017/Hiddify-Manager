@@ -1,3 +1,4 @@
+# This script is part of services/hiddify-core.
 CONFIG_FILE=/opt/hiddify-manager/generated/hiddify-core.json
 sed -i 's|"proxy_protocol":true|"proxy_protocol":false|g' "$CONFIG_FILE"
 
