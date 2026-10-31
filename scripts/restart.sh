@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts.
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 cd /opt/hiddify-manager
