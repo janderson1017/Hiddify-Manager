@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/mysql.
 source /opt/hiddify-manager/scripts/common/utils.sh
 source /opt/hiddify-manager/services/mysql/utils.sh
 cd "$(dirname -- "$0")"
