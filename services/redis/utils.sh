@@ -1,3 +1,4 @@
+# This script is part of services/redis.
 # Redis helpers — source after scripts/common/utils.sh
 
 HIDDIFY_REDIS_DATA="$HIDDIFY_DATA/redis"
