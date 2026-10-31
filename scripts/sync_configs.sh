@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts.
 # Regenerate server configs from the panel (no service restart).
 cd /opt/hiddify-manager/services/panel
 source /opt/hiddify-manager/scripts/common/utils.sh
