@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/dns_proxy/masterdns.
 # Run MasterDnsVPN; secrets/config come from custom_proxy.params (dump-server-configs).
 set -euo pipefail
 INSTANCE="${1:?instance slug required}"

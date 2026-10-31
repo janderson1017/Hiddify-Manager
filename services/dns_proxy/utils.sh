@@ -1,3 +1,4 @@
+# This script is part of services/dns_proxy.
 # DNS proxy helpers — source after scripts/common/utils.sh
 
 # docker-systemctl-replacement ignores list-unit-files globs and returns every

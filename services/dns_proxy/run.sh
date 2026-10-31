@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/dns_proxy.
 # Enable/disable per-domain DNS tunnel units from generated/dns_proxy/{proto}/.
 set -euo pipefail
 source /opt/hiddify-manager/scripts/common/utils.sh
