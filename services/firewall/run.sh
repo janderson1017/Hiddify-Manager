@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/firewall.
 # The firewall rules are rendered by the panel (firewall core, a server base config in the database) to generated/firewall.sh.
 source /opt/hiddify-manager/scripts/common/utils.sh
 if [ ! -s "$HIDDIFY_GENERATED/firewall.sh" ]; then
