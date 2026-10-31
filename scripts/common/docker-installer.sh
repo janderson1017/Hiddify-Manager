@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of scripts/common.
 
 # Check if Docker is installed, if not, install it
 command -v docker &>/dev/null || curl -fsSL https://get.docker.com | sh
