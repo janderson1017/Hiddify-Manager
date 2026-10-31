@@ -1,3 +1,4 @@
+# This script is part of scripts/common.
 export HIDDIFY_DIR="/opt/hiddify-manager"
 export HIDDIFY_SCRIPTS="$HIDDIFY_DIR/scripts"
 export HIDDIFY_SERVICES="$HIDDIFY_DIR/services"
