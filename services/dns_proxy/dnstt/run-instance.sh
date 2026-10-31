@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/dns_proxy/dnstt.
 # Run vaydns-server; argv comes from generated args (server_config → include_path).
 set -euo pipefail
 INSTANCE="${1:?instance slug required}"
