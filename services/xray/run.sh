@@ -1,3 +1,4 @@
+# This script is part of services/xray.
 # mv /usr/local/etc/xray/config.json /usr/local/etc/xray/config.json.old
 # ln -sf $(pwd)/xtls-config.json /usr/local/etc/xray/config.json
 # ln -sf $(pwd)/xtls-sni-config.json /usr/local/etc/xray/config.json
