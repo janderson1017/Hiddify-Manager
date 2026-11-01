@@ -1,3 +1,4 @@
+# This script is part of services/wireguard.
 SERVER_WG_NIC=hiddifywg
 
 allow_wg_quick_read() {
