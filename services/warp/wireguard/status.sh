@@ -1,3 +1,4 @@
+# This script is part of services/warp/wireguard.
 cd $( dirname -- "$0"; )
 source /opt/hiddify-manager/scripts/common/utils.sh
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/panel.
 cd $(dirname -- "$0")
 
 function main() {

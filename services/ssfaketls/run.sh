@@ -1,3 +1,4 @@
 #!/bin/bash
+# This script is part of services/ssfaketls.
 systemctl enable hiddify-ss-faketls.service
 systemctl restart hiddify-ss-faketls.service

@@ -1,3 +1,4 @@
+# This script is part of services/xray.
 source /opt/hiddify-manager/scripts/common/utils.sh
 source /opt/hiddify-manager/scripts/common/package_manager.sh
 # latest= #$(get_release_version hiddify-sing-box)

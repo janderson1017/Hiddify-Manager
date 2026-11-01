@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/telegram/telemt.
 ln -sf "$(pwd)/hiddify-telegram-proxy.service" /etc/systemd/system/hiddify-telegram-proxy.service
 systemctl enable hiddify-telegram-proxy.service
 systemctl restart hiddify-telegram-proxy.service

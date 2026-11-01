@@ -1,3 +1,4 @@
+# This script is part of services/panel.
 source /opt/hiddify-manager/scripts/common/utils.sh
 activate_python_venv
 install_package wireguard libev-dev libevdev2 default-libmysqlclient-dev build-essential pkg-config ssh

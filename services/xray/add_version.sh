@@ -1,3 +1,4 @@
+# This script is part of services/xray.
 latest=$1
 source /opt/hiddify-manager/scripts/common/package_manager.sh
 add_package xray $latest arm64 https://github.com/XTLS/Xray-core/releases/download/v$latest/Xray-linux-arm64-v8a.zip

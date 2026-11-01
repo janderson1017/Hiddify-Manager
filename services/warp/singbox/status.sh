@@ -1,3 +1,4 @@
+# This script is part of services/warp/singbox.
 cd $( dirname -- "$0"; )
 function main(){
 curl https://cloudflare.com/cdn-cgi/status --connect-timeout 1 -x socks://127.0.0.1:3000

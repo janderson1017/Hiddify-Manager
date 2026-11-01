@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/telegram.
 # Turning Telegram proxy off must succeed when units were never installed
 # (otherwise run_parallel paints "Telegram Proxy" red on a healthy install).
 systemctl stop hiddify-telegram-proxy >/dev/null 2>&1 || true

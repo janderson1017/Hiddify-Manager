@@ -1,3 +1,4 @@
+# This script is part of services/warp/singbox.
 source /opt/hiddify-manager/scripts/common/utils.sh
 source /opt/hiddify-manager/services/warp/utils.sh
 ensure_warp_data_links singbox "$(pwd)"
