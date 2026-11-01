@@ -1,3 +1,4 @@
+# This script is part of services/panel.
 mkdir -p videos
 which yt-dlp
 if [[ "$?" != 0 ]];then
