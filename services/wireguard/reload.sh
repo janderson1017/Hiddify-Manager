@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/wireguard.
 cd "$(dirname -- "$0")"
 source ./wg_utils.sh
 
