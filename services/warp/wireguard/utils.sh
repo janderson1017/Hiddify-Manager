@@ -1,3 +1,4 @@
+# This script is part of services/warp/wireguard.
 # WARP WireGuard helpers — source after scripts/common/utils.sh
 source /opt/hiddify-manager/services/warp/utils.sh
 
