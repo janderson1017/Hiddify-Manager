@@ -1,3 +1,4 @@
+# This script is part of services/wireguard.
 source ./wg_utils.sh
 
 generated="/opt/hiddify-manager/generated/wireguard.conf"
