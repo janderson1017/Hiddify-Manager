@@ -1,3 +1,4 @@
+# This script is part of services/warp/wireguard.
 latest=$1
 source ../../../scripts/common/package_manager.sh
 add_package wgcf $latest arm64 https://github.com/ViRb3/wgcf/releases/download/v$latest/wgcf_${latest}_linux_arm64

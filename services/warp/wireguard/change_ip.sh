@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/warp/wireguard.
 
 # Change to the directory of the script
 cd "$(dirname -- "$0")"
