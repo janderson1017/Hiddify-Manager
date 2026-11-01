@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/warp/wireguard.
 #ln -sf $(pwd)/hiddify-warp.service /etc/systemd/system/hiddify-warp.service
 source /opt/hiddify-manager/scripts/common/utils.sh
 source /opt/hiddify-manager/services/warp/wireguard/utils.sh
