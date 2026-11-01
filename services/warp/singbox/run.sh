@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/warp/singbox.
 ln -sf $(pwd)/hiddify-warp.service /etc/systemd/system/hiddify-warp.service
 systemctl enable hiddify-warp.service
 
