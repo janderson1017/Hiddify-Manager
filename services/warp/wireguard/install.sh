@@ -1,3 +1,4 @@
+# This script is part of services/warp/wireguard.
 # bash download_wgcf.sh
 source /opt/hiddify-manager/scripts/common/utils.sh
 source /opt/hiddify-manager/services/warp/wireguard/utils.sh
