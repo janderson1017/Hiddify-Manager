@@ -1,3 +1,4 @@
+# This script is part of services/wireguard.
 source /opt/hiddify-manager/scripts/common/utils.sh
 source ./wg_utils.sh
 install_package wireguard

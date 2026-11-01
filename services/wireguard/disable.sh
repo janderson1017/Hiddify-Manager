@@ -1,3 +1,4 @@
+# This script is part of services/wireguard.
 source ./wg_utils.sh
 
 systemctl stop "wg-quick@${SERVER_WG_NIC}"
