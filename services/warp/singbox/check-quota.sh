@@ -1,3 +1,4 @@
+# This script is part of services/warp/singbox.
 # 查 WARP+ 余额流量接口
 cd $( dirname -- "$0"; )
 check_quota() {
