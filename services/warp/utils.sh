@@ -1,3 +1,4 @@
+# This script is part of services/warp.
 # WARP helpers — source after scripts/common/utils.sh
 
 function ensure_warp_data_links() {
