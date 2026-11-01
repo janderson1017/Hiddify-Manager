@@ -1,3 +1,4 @@
+# This script is part of services/telegram/telemt.
 source /opt/hiddify-manager/scripts/common/package_manager.sh
 
 download_package telemt telemt.tar.gz

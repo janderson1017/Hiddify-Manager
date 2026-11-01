@@ -1,3 +1,4 @@
+# This script is part of services/telegram/telemt.
 latest=$1
 source ../../../scripts/common/package_manager.sh
 add_package telemt $latest arm64 https://github.com/telemt/telemt/releases/download/$latest/telemt-aarch64-linux-gnu.tar.gz
