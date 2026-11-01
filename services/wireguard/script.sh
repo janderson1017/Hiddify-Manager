@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/wireguard.
 
 # Secure WireGuard server installer
 # https://github.com/angristan/wireguard-install
