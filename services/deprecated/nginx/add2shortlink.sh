@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/deprecated/nginx.
 cd $( dirname -- "$0"; )
 real_url=$1
 short_code=$2
