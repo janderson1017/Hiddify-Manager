@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/caddy.
 which caddy
 if [[ "$?" != 0 ]];then
     sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
