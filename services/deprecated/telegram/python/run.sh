@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/telegram/python.
 ln -sf $(pwd)/hiddify-telegram-proxy.service /etc/systemd/system/hiddify-telegram-proxy.service
 echo "ln -sf  $(pwd)/hiddify-telegram-proxy.service /etc/systemd/system/hiddify-telegram-proxy.service"
 cp config.py mtprotoproxy/config.py
