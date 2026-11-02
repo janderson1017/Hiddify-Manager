@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/sniproxy.
 # rm /etc/sniproxy.conf
 # ln -sf $(pwd)/sniproxy.conf /etc/sniproxy.conf
 
