@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/telegram/python.
 source /opt/hiddify-manager/scripts/common/utils.sh
 install_package python3 python3-uvloop python3-cryptography python3-socks libcap2-bin
 
