@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/acme.sh.
 cd $(dirname -- "$0")
 source /opt/hiddify-manager/scripts/common/utils.sh
 source ./cert_utils.sh

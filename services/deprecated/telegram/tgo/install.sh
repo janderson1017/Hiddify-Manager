@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/telegram/tgo.
 source /opt/hiddify-manager/scripts/common/package_manager.sh
 
 echo "telegram proxy install.sh $*"

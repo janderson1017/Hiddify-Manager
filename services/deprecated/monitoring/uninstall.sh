@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/monitoring.
 systemctl kill hiddify_monitoring_web.service
 systemctl disable hiddify_monitoring_web.service
 rm -rf /etc/cron.d/hiddify-monitoring

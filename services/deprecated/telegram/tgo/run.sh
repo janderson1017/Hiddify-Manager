@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/telegram/tgo.
 systemctl kill hiddify-telegram-proxy.service
 
 

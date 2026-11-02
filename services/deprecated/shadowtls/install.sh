@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/shadowtls.
 source /opt/hiddify-manager/scripts/common/utils.sh
 
 if ! is_installed ./shadowtls; then

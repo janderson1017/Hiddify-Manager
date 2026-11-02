@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/nginx.
 source /opt/hiddify-manager/scripts/common/utils.sh
 if ! is_installed "nginx=1.30.*"; then
     useradd nginx

@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/sniproxy.
 apt install sniproxy -y
 
 systemctl disable sniproxy

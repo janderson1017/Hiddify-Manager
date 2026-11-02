@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/caddy.
 
 
 

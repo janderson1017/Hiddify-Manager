@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/telegram/orig.
 echo "telegram proxy install.sh $*"
 systemctl stop hiddify-telegram-proxy.service >/dev/null 2>&1
 systemctl disable hiddify-telegram-proxy.service >/dev/null 2>&1
