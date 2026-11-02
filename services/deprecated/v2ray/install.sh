@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/v2ray.
 source /opt/hiddify-manager/scripts/common/package_manager.sh
 install_package shadowsocks-libev
 
