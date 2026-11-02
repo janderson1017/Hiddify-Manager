@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/monitoring.
 source /opt/hiddify-manager/scripts/common/utils.sh
 activate_python_venv
 apt install -y cron
