@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/clash-server.
 for req in ./clashmeta;do
     which $req
     if [[ "$?" != 0 ]];then
