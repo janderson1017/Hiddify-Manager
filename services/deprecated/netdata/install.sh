@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/netdata.
 apt install -y netdata
 
 echo "" >/etc/netdata/apps_groups.conf
