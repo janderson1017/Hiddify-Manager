@@ -1,3 +1,4 @@
+# This file is part of services/deprecated/nginx.
 [Unit]
 Description=hiddify-nginx - high performance web server
 Documentation=https://nginx.org/en/docs/
