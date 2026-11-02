@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/clash-server.
 
 pkg=$(dpkg --print-architecture)
 
