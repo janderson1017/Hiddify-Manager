@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is part of services/deprecated/nginx.
 
 source /opt/hiddify-manager/scripts/common/utils.sh
 mkdir -p /opt/hiddify-manager/data/services/nginx/parts
