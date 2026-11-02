@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/certbot.
 
 # MAIN_DOMAIN="$MAIN_DOMAIN;$SERVER_IP.sslip.io"
 DOMAINS=${MAIN_DOMAIN//;/ }

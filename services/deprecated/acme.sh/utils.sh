@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/acme.sh.
 # ACME install helpers — source after scripts/common/utils.sh
 
 ACME_LIB_DIR="$HIDDIFY_SERVICES/acme.sh/lib"
