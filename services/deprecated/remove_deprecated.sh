@@ -1,3 +1,4 @@
+# This script is part of services/deprecated.
 # Telegram proxies other than telemt (deprecated): erlang ran as mtproto-proxy; the others used hiddify-telegram-proxy,
 # which telemt now owns and restarts itself.
 systemctl disable --now mtproto-proxy.service >/dev/null 2>&1
