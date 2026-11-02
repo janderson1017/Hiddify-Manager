@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/trojan-go.
 echo "trojan-go install.sh $*"
 systemctl kill trojan-go.service
 
