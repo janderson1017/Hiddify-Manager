@@ -1,3 +1,4 @@
+# This script is part of services/deprecated/trojan-go.
 systemctl kill trojan-go.service
 ln -sf $(pwd)/trojan-go.service /etc/systemd/system/trojan-go.service
 systemctl enable trojan-go.service
